@@ -1,15 +1,20 @@
+/* Import Google Font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* ========================
-   GENERAL STYLES
+   RESET & GENERAL STYLES
 ======================== */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 {
-  text-align: center;
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  line-height: 1.6;
 }
 
 /* ========================
@@ -19,11 +24,12 @@ h1, h2, h3 {
   position: absolute;
   top: -40px;
   left: 10px;
-  background: #000;
+  background: #333;
   color: #fff;
   padding: 10px;
   text-decoration: none;
   z-index: 100;
+  transition: top 0.3s ease;
 }
 
 .skip-link:focus {
@@ -38,13 +44,15 @@ nav {
   padding: 10px 0;
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
   padding: 10px 20px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 nav a:hover {
@@ -53,33 +61,57 @@ nav a:hover {
 }
 
 /* ========================
-   MENU GRID LAYOUT (dùng cho menu.html)
+   HEADER
 ======================== */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.menu-item {
+header {
+  background: #ff6f61;
+  color: #fff;
+  padding: 30px 20px;
   text-align: center;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
 /* ========================
-   DISH DETAIL STYLING (dùng cho detail.html)
+   MAIN CONTENT AREA
 ======================== */
-.dish {
-  text-align: center;
-  margin-bottom: 30px;
+main {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
+/* ========================
+   DISH DETAIL STYLING
+======================== */
+.dish {
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.dish:hover {
+  transform: translateY(-5px);
+}
+
+.dish h2 {
+  margin-bottom: 15px;
+  color: #ff6f61;
+}
+
+.dish p {
+  font-size: 1rem;
+}
+
+/* ========================
+   IMAGE STYLING
+======================== */
 .dish img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
@@ -92,12 +124,40 @@ nav a:hover {
 }
 
 /* ========================
-   FOOTER (nếu có)
+   MENU GRID LAYOUT (cho menu.html)
+======================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-item {
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ========================
+   FOOTER
 ======================== */
 footer {
   background: #333;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   margin-top: 20px;
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
