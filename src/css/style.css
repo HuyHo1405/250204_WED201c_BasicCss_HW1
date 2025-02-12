@@ -1,89 +1,103 @@
-
+/* ========================
+   GENERAL STYLES
+======================== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
 }
 
 h1, h2, h3 {
-    text-align: center;
+  text-align: center;
 }
 
+/* ========================
+   SKIP TO MAIN CONTENT LINK
+======================== */
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 10px;
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    z-index: 100;
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 100;
 }
 
 .skip-link:focus {
-    top: 10px;
+  top: 10px;
 }
 
+/* ========================
+   NAVIGATION
+======================== */
 nav {
-    background-color: #333;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
 }
+
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: background 0.3s;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s;
 }
+
 nav a:hover {
-    background: #555;
-    border-radius: 5px;
+  background: #555;
+  border-radius: 5px;
 }
 
-.food-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-.food-item {
-    text-align: center;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* ========================
+   MENU GRID LAYOUT (dùng cho menu.html)
+======================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.food-detail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-.food-detail img {
-    max-width: 300px;
-    border-radius: 10px;
+.menu-item {
+  text-align: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.food-image {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    padding: 5px;
-    border: 2px solid #ddd;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-.food-image:hover {
-    transform: scale(1.05);
+/* ========================
+   DISH DETAIL STYLING (dùng cho detail.html)
+======================== */
+.dish {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.food-item:nth-child(even) {
-    background-color: #f0f0f0;
+.dish img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.food-item:nth-child(odd) {
-    background-color: #e0e0e0;
+
+.dish img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================
+   FOOTER (nếu có)
+======================== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
