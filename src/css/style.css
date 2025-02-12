@@ -172,7 +172,7 @@ footer {
 .hero-section {
     display: flex;
     width: 100%;
-    /* Dùng min-height để hero co giãn theo nội dung, đồng thời đảm bảo chiều cao tối thiểu */
+    /* Sử dụng min-height để phần hero co giãn theo nội dung */
     min-height: 50vh;
     align-items: stretch;
     overflow: hidden;
@@ -190,9 +190,9 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    color: #000;               /* Đổi chữ thành màu đen */
+    color: #000;               /* Chữ màu đen */
     font-size: 2rem;
-    /* Thêm lớp nền trắng mờ để đảm bảo chữ dễ đọc trên nền ảnh */
+    /* Sử dụng nền trắng mờ để chữ dễ đọc trên nền ảnh */
     background: rgba(255, 255, 255, 0.7);
     /* Bỏ text-shadow */
 }
