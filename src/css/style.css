@@ -169,11 +169,11 @@ footer {
 /* ========================
    HERO SECTION (PHẦN MỚI Ở DƯỚI HEADER)
 ======================== */
+/* Giả sử header (màu đỏ) chiếm khoảng 80px (bao gồm padding và margin-bottom) */
 .hero-section {
     display: flex;
     width: 100%;
-    /* Sử dụng min-height để phần hero co giãn theo nội dung */
-    min-height: 50vh;
+    height: calc(100vh - 80px);  /* Chiếm phần còn lại của viewport dưới header */
     align-items: stretch;
     overflow: hidden;
 }
@@ -185,8 +185,7 @@ footer {
 
 .hero-text {
     flex: 1;
-    /* Không đặt padding trực tiếp ở đây để nền kéo dài full */
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.7); /* Nền trắng mờ full chiếm toàn bộ khung bên phải */
 }
 
 .hero-text-inner {
@@ -210,7 +209,7 @@ footer {
     }
     .hero-section {
         flex-direction: column;
-        min-height: auto;
+        height: auto;
     }
     .hero-text-inner {
         text-align: center;
