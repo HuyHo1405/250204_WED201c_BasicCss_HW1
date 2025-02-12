@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 /* ========================
-   HEADER
+   HEADER (PHẦN MÀU ĐỎ - KHÔNG THAY ĐỔI)
 ======================== */
 header {
   background: #ff6f61;
@@ -118,7 +118,6 @@ main {
 ======================== */
 .dish-container {
   display: grid;
-  /* Nếu muốn luôn 2 cột: grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
@@ -167,34 +166,47 @@ footer {
   margin-top: 20px;
 }
 
+/* ========================
+   HERO SECTION (PHẦN MỚI Ở DƯỚI HEADER)
+======================== */
 .hero-section {
     display: flex;
     height: 50vh;
+    width: 100%;
 }
 
 .hero-image {
     flex: 1;
+    /* Ảnh nền chiếm toàn bộ phần bên trái */
     background: url('../images/pho.jpg') center/cover no-repeat;
 }
 
 .hero-text {
     flex: 1;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    background-color: #f8f8f8;
+    text-align: right;
+    /* Sử dụng lớp phủ tối để chữ nổi bật */
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
 }
-
-
 
 /* ========================
    RESPONSIVE DESIGN
 ======================== */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-text {
+        text-align: center;
+    }
 }
-
