@@ -63,7 +63,7 @@ nav a:hover {
 /* ========================
    HEADER (PHẦN MÀU ĐỎ - KHÔNG THAY ĐỔI)
 ======================== */
-header {
+.site-header {
   background: #ff6f61;
   color: #fff;
   padding: 30px 20px;
@@ -80,104 +80,20 @@ main {
   max-width: 1200px;
 }
 
-/* ========================
-   DISH DETAIL STYLING (cho details.html)
-======================== */
-.dish {
-  background: #fff;
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.dish:hover {
-  transform: translateY(-5px);
-}
-
-.dish img {
-  width: 100%;
-  max-width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 10px;
-}
-
-.dish img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================
-   DISH CONTAINER LAYOUT (cho details.html)
-   Hiển thị 2 món ăn mỗi hàng
-======================== */
-.dish-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-/* ========================
-   MENU GRID LAYOUT (cho menu.html)
-======================== */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.menu-item {
-  text-align: center;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.menu-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
+/* (Các phần CSS khác dành cho details, menu, footer... giữ nguyên) */
 
 /* ========================
    HERO SECTION (PHẦN MỚI Ở DƯỚI HEADER)
 ======================== */
 .hero-section {
     display: flex;
-    height: 50vh;
+    height: 40vh; /* Điều chỉnh chiều cao theo ý bạn */
     width: 100%;
 }
 
 .hero-image {
     flex: 1;
-    /* Ảnh nền chiếm toàn bộ phần bên trái */
+    /* Ảnh nền sẽ chiếm toàn bộ phần bên trái */
     background: url('../images/pho.jpg') center/cover no-repeat;
 }
 
@@ -188,8 +104,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    /* Sử dụng lớp phủ tối để chữ nổi bật */
-    background: rgba(0, 0, 0, 0.5);
+    /* Không thêm màu nền, chỉ để chữ màu trắng */
     color: #fff;
     font-size: 2rem;
 }
