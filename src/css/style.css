@@ -185,16 +185,19 @@ footer {
 
 .hero-text {
     flex: 1;
+    /* Không đặt padding trực tiếp ở đây để nền kéo dài full */
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-text-inner {
+    height: 100%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    color: #000;               /* Chữ màu đen */
+    color: #000;   /* Chữ màu đen */
     font-size: 2rem;
-    /* Sử dụng nền trắng mờ để chữ dễ đọc trên nền ảnh */
-    background: rgba(255, 255, 255, 0.7);
-    /* Bỏ text-shadow */
 }
 
 /* ========================
@@ -209,7 +212,7 @@ footer {
         flex-direction: column;
         min-height: auto;
     }
-    .hero-text {
+    .hero-text-inner {
         text-align: center;
     }
 }
