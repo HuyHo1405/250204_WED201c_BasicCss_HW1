@@ -1,185 +1,17 @@
-/* Import Google Font Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* ========================
-   RESET & GENERAL STYLES
-======================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ========================
-   SKIP TO MAIN CONTENT LINK
-======================== */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  text-decoration: none;
-  z-index: 100;
-  transition: top 0.3s ease;
-}
-
-.skip-link:focus {
-  top: 10px;
-}
-
-/* ========================
-   NAVIGATION
-======================== */
-nav {
-  background-color: #333;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: background 0.3s ease;
-}
-
-nav a:hover {
-  background: #555;
-  border-radius: 5px;
-}
-
-/* ========================
-   HEADER (PHẦN MÀU ĐỎ - KHÔNG THAY ĐỔI)
-======================== */
-header {
-  background: #ff6f61;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* ========================
-   MAIN CONTENT AREA
-======================== */
-main {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* ========================
-   DISH DETAIL STYLING (cho details.html)
-======================== */
-.dish {
-  background: #fff;
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.dish:hover {
-  transform: translateY(-5px);
-}
-
-.dish img {
-  width: 100%;
-  max-width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 10px;
-}
-
-.dish img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================
-   DISH CONTAINER LAYOUT (cho details.html)
-   Hiển thị 2 món ăn mỗi hàng
-======================== */
-.dish-container {
-  display: grid;
-  /* Nếu muốn luôn 2 cột: grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-/* ========================
-   MENU GRID LAYOUT (cho menu.html)
-======================== */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.menu-item {
-  text-align: center;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.menu-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
 /* ========================
    HERO SECTION (PHẦN MỚI Ở DƯỚI HEADER)
 ======================== */
 .hero-section {
     display: flex;
-    height: 40vh;  /* Chiều cao của phần hero, có thể điều chỉnh theo ý bạn */
     width: 100%;
-    overflow: hidden;
+    min-height: 50vh;  /* Chiều cao tối thiểu của phần hero */
+    align-items: stretch; /* Kéo dài phần tử con theo chiều cao */
 }
 
 .hero-image {
     flex: 1;
     background: url('../images/pho.jpg') center/cover no-repeat;
+    min-height: inherit;
 }
 
 .hero-text {
@@ -189,25 +21,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    color: #fff;
+    color: #000;               /* Đổi màu chữ thành đen */
     font-size: 2rem;
-    /* Không thêm nền màu, để nền của hero-section (ảnh) hiện ra */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-}
-
-/* ========================
-   RESPONSIVE DESIGN
-======================== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hero-section {
-        flex-direction: column;
-        height: auto;
-    }
-    .hero-text {
-        text-align: center;
-    }
+    text-shadow: none;         /* Bỏ hiệu ứng text-shadow */
+    background: rgba(255, 255, 255, 0.7);  /* Lớp phủ trắng mờ cho phần text */
 }
