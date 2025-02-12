@@ -1,217 +1,34 @@
-/* Import Google Font Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* ========================
-   RESET & GENERAL STYLES
-======================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ========================
-   SKIP TO MAIN CONTENT LINK
-======================== */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  text-decoration: none;
-  z-index: 100;
-  transition: top 0.3s ease;
-}
-
-.skip-link:focus {
-  top: 10px;
-}
-
-/* ========================
-   NAVIGATION
-======================== */
-nav {
-  background-color: #333;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: background 0.3s ease;
-}
-
-nav a:hover {
-  background: #555;
-  border-radius: 5px;
-}
-
-/* ========================
-   HEADER (PHẦN MÀU ĐỎ - KHÔNG THAY ĐỔI)
-======================== */
-header {
-  background: #ff6f61;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  margin-bottom: 0;  /* Đã thay đổi từ 20px thành 0 */
-}
-
-/* ========================
-   MAIN CONTENT AREA
-======================== */
-main {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* ========================
-   DISH DETAIL STYLING (cho details.html)
-======================== */
-.dish {
-  background: #fff;
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.dish:hover {
-  transform: translateY(-5px);
-}
-
-.dish img {
-  width: 100%;
-  max-width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 10px;
-}
-
-.dish img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================
-   DISH CONTAINER LAYOUT (cho details.html)
-   Hiển thị 2 món ăn mỗi hàng
-======================== */
-.dish-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-/* ========================
-   MENU GRID LAYOUT (cho menu.html)
-======================== */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.menu-item {
-  text-align: center;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.menu-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-/* ========================
-   HERO SECTION (PHẦN MỚI Ở DƯỚI HEADER)
-======================== */
-/* Giả sử header chiếm khoảng 80px (bao gồm padding và không có margin-bottom) */
-.hero-section {
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 80px);  /* Chiếm phần còn lại của viewport dưới header */
-    align-items: stretch;
-    overflow: hidden;
-}
-
-.hero-image {
-    flex: 1;
-    background: url('../images/pho.jpg') center/cover no-repeat;
-}
-
-.hero-text {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.7); /* Nền trắng mờ full chiếm toàn bộ khung bên phải */
-}
-
-.hero-text-inner {
-    height: 100%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: right;
-    color: #000;   /* Chữ màu đen */
-    font-size: 2rem;
-}
-
-/* ========================
-   RESPONSIVE DESIGN
-======================== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hero-section {
-        flex-direction: column;
-        height: auto;
-    }
-    .hero-text-inner {
-        text-align: center;
-    }
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ẩm Thực Việt Nam | Vietnamese Cuisine</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Bỏ qua nội dung | Skip to Main Content</a>
+  <nav>
+    <a href="index.html">Trang Chủ | Home</a>
+    <a href="menu.html">Món Ăn | Menu</a>
+    <a href="details.html">Chi Tiết | Details</a>
+  </nav>
+  
+  <!-- Header màu đỏ (không thay đổi) -->
+  <header class="site-header">
+    <h1>Khám Phá Ẩm Thực Việt Nam | Discover Vietnamese Cuisine</h1>
+  </header>
+  
+  <!-- Phần Hero nằm ngay dưới header -->
+  <section class="hero-section">
+    <div class="hero-image"></div>
+    <div class="hero-text">
+      <div class="hero-text-inner">
+        <h2>Welcome to Vietnamese Cuisine</h2>
+        <p>Việt Nam nổi tiếng với nền ẩm thực phong phú, đa dạng và đậm đà hương vị.</p>
+        <p>Vietnam is famous for its rich, diverse, and flavorful cuisine.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
